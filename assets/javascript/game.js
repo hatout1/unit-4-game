@@ -11,13 +11,13 @@ $(document).ready(function () {
 
     // creating randomo number to be attached to each crystal.
     var green = Math.floor((Math.random() * 10) + 1);
-    console.log(green);
+    //console.log(green);
     var blue = Math.floor((Math.random() * 10) + 1);
-    console.log(blue);
+    //console.log(blue);
     var orange = Math.floor((Math.random() * 10) + 1);
-    console.log(orange);
+    //console.log(orange);
     var pink = Math.floor((Math.random() * 10) + 1);
-    console.log(pink);
+    //console.log(pink);
 
     // beggining value for wins, losses and total clicks counts then append it to be shown on the web.
 
@@ -30,30 +30,104 @@ $(document).ready(function () {
     var totalClicks = 0;
     $('#score').text(totalClicks);
 
+    // function to reset the game
 
+    function reset() {
+        target = Math.floor((Math.random() * 80) + 20);
+
+        $('#computerRandom').text(target);
+
+        green = Math.floor((Math.random() * 10) + 1);
+
+        blue = Math.floor((Math.random() * 10) + 1);
+
+        orange = Math.floor((Math.random() * 10) + 1);
+
+        pink = Math.floor((Math.random() * 10) + 1);
+
+        totalClicks = 0;
+    }
+
+    //  function to increment wins and reset the game for new random values
+
+    function winner() {
+        wins++;
+        $('#wins').text(wins);
+        reset();
+    }
+
+    //  function to increment losses and reset the game for new random values
+
+    function looser() {
+        losses++;
+        $('#losses').text(losses);
+        reset();
+    }
+
+
+    // onclick function for green crystal
+
+    $('#green').on('click', function () {
+        totalClicks = totalClicks + green;
+        $('#score').text(totalClicks);
+
+
+        // if/else function to compare the two values of totalClicks and the target number
+
+        if (target == totalClicks) {
+            winner();
+        } else if (target < totalClicks) {
+            looser();
+        }
+    })
+
+    // onclick function for green crystal
+
+    $('#blue').on('click', function () {
+        totalClicks = totalClicks + blue;
+        $('#score').text(totalClicks);
+
+
+        // if/else function to compare the two values of totalClicks and the target number
+
+        if (target == totalClicks) {
+            winner();
+        } else if (target < totalClicks) {
+            looser();
+        }
+    })
+
+    // onclick function for green crystal
+
+    $('#orange').on('click', function () {
+        totalClicks = totalClicks + orange;
+        $('#score').text(totalClicks);
+
+
+        // if/else function to compare the two values of totalClicks and the target number
+
+        if (target == totalClicks) {
+            winner();
+        } else if (target < totalClicks) {
+            looser();
+        }
+    })
+
+    // onclick function for green crystal
+
+    $('#pink').on('click', function () {
+        totalClicks = totalClicks + pink;
+        $('#score').text(totalClicks);
+
+
+        // if/else function to compare the two values of totalClicks and the target number
+
+        if (target == totalClicks) {
+            winner();
+        } else if (target < totalClicks) {
+            looser();
+        }
+    });
 });
-
-// function that generats a random number between 20 to 100
-// Random number Generator
-
-
-
-
-
-
-
-
-
-
-// functios that assigns random numbers to the crystals
-
-
-
-
-
-
-
-//function that calculats the total number of clicked crystal's value
-
 
 
