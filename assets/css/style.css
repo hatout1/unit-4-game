@@ -11,7 +11,7 @@ body {
 
 /*nav barre lay out*/
 .nav{
-    background-color: rgba(255, 255, 255, 0.705);
+    background-color: rgba(255, 255, 255, 0.39);
     height: 7.5vh;
     width: 100%;
     text-align: center;
@@ -31,14 +31,12 @@ h1{
 
 #inst {
     width: 60%;
-    padding: 0px;
     margin-top: 5px;
     margin-left: 20%;
     margin-right: 20%;
-    color: rgb(247, 247, 247);
+    color: rgb(20, 134, 241);
     display: table;
     position: relative;
-    background-color: rgba(240, 248, 255, 0.116);
     text-align: justify;
 }
 
@@ -54,30 +52,53 @@ h3{
     display: table;
     width: 80%;
     height: 20vh;
-    background-color: rgba(240, 248, 255, 0.116);
+    font-size: 32px;
+    /* background-color: rgba(240, 248, 255, 0.116); */
 }
 .target {
     display: table;
     float: left;
     width: 30%;
     color: white;
-   text-align: center;
-   color: blue;
+    text-align: center;
 }
 
 .result {
 color:   rgb(247, 247, 247);
 display: table;
-background-color: rgba(240, 248, 255, 0.116);
 width: 50%;
 float: left;
 margin-left: 10%;
 }
-#computerRandom{
-transform: translate(50%,50%);
+
+.wins,
+.losses {
+    display: table;
+    height: 9vh;
+    padding-left: 10%;
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
+}
+.wins {
+    color: rgb(15, 236, 15);
+}
+.losses {
+    color: rgb(235, 55, 94);
+}
+
+#comp{
+/* transform: translate(50%,50%); */
 color: red;
-margin-left: 40%;
+margin-left: 0;
 font-size: 48px;
+background-color: aliceblue;
+width: 100%;
+float: left;
+border-radius: 100%;
+background-color: rgba(255, 255, 255, 0.185);
+
+
 
 }
 
@@ -88,21 +109,14 @@ h4{
         
     }
 p {
-    color: white;
-    font-size: 24px;
+    color: rgb(25, 238, 43);
+    font-size: 32px;
     text-align: center;
     margin: 5px;
-    
+       
 }
 
-.wins,
-.losses {
-    display: table;
-    background-color: black;
-    height: 9.5vh;
-    padding-left: 10%;
-    padding-top: 5%;
-}
+
 
 .images {
     width: 100%;
@@ -117,25 +131,27 @@ img{
     
 float: left;
 margin-left: 15%;
-margin-bottom: 50px;
+margin-bottom: 25px;
 }
 
 
 
 #score {
     display: table;
-    background-color: black;
-    width: 40%;
+    background-color: rgba(255, 255, 255, 0.432);
+    width: 10%;
     height: 100px;
     float: left;
     margin-top: 20px;
-    margin-right: 30%;
-    margin-left: 30%;
+    margin-right: 45%;
+    margin-left: 45%;
     text-align: center;
     vertical-align: middle;
     color: yellow;
     font-size: 48px;
-    padding-top: 3%
+    padding-top: 3%;
+    border-radius: 100%;
+    
 }
 
 
